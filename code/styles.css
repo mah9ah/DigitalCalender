@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(45deg, #ffdf6b, #b98f34, #c7430b, #ba0a07);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: rgb(224, 214, 214);
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(58, 56, 56, 0.911);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.clock-container {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.digital-clock {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.analog-clock {
+    width: 200px;
+    height: 200px;
+    border: 10px solid rgb(12, 12, 12);
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+
+.number {
+    position: absolute;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.number-1 { transform: rotate(30deg); }
+.number-2 { transform: rotate(60deg); }
+.number-3 { transform: rotate(90deg); }
+.number-4 { transform: rotate(120deg); }
+.number-5 { transform: rotate(150deg); }
+.number-6 { transform: rotate(180deg); }
+.number-7 { transform: rotate(210deg); }
+.number-8 { transform: rotate(240deg); }
+.number-9 { transform: rotate(270deg); }
+.number-10 { transform: rotate(300deg); }
+.number-11 { transform: rotate(330deg); }
+.number-12 { transform: rotate(0deg); }
+
+.number span {
+    display: block;
+    transform: rotate(-30deg);
+}
+
+
+.number-1 { top: 6%; right: 30%; }
+.number-2 { top: 25%; right: 12%; }
+.number-3 { top: 45%; right: 5%; }
+.number-4 { top: 65%; right: 10%; }
+.number-5 { top: 80%; right: 30%; }
+.number-6 { top: 85%; right: 50%; }
+.number-7 { top: 80%; right: 70%; }
+.number-8 { top: 65%; right: 85%; }
+.number-9 { top: 45%; right: 90%; }
+.number-10 { top: 25%; right: 85%; }
+.number-11 { top: 8%; right: 70%; }
+.number-12 { top: 2%; right: 50%; }
+
+.hand {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform-origin: bottom;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 30%;
+    background: #ff6b6b;
+}
+
+.minute-hand {
+    width: 3px;
+    height: 40%;
+    background: #080808;
+}
+
+.second-hand {
+    width: 2px;
+    height: 45%;
+    background: #040404;
+}
+
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.calendar {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.calendar-day {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.current-day {
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: bold;
+}
+
+.weekday {
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+center-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.center-dot::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #333;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.center-dot::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: #666;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
